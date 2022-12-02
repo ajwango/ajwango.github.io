@@ -136,14 +136,8 @@ nav ul li a:hover::after {
 .PRO {
     background-color: #d5dddf;
     height: vh;
-    width: 80%;
-    background-position: top 20% right 0%;
-    background-size: cover;
-    padding: 20px 40px;
-    display: flex;
-    align-items: flex-start;
-    flex-direction:row;
-    justify-content: center;
+    width: 100%;
+   
 }
 .hero h6 {
     color: aqua;
