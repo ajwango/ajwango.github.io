@@ -141,6 +141,9 @@ nav ul li a:hover::after {
     padding-left: 50px;
    
 }
+.pro h1{
+    text-align: center;
+}
 .hero h6 {
     color: aqua;
     font-size: 10px;
