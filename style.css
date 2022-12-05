@@ -22,8 +22,8 @@ txt_field{
     padding: 20PX 20PX 20PX;
 }
 .txt_field input{
-    width: 150px;
-    height: 40px;
+    width: 100px;
+    height: 35px;
     padding: 1px 5px;
     background: whitesmoke;
     
