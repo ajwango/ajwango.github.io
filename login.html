@@ -7,14 +7,13 @@
     <link rel="icon" href="pictures/project.jpg">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
-    <script src="script.js"></script>
-    <script type="test/javascript" src="script.js"></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </head>
+<body>
     <div class="header">
         <div class="logo">
             <img src="pictures/project.jpg" width="100" height="60" class="logo" alt="">
@@ -25,55 +24,56 @@
             </ul>
         </nav>
     </div>
-<body>
-   
+
+    <form method="post" autocomplete="off" name="google-sheet">
     <div class=".container mt-1">
         <h3git >Send us your details to join our team</h3>
         <div class="row mt-1">
             <div class="col-sm-4">
-              <input type="text" class="form-control"  placeholder=" First Name"required>
+              <input type="text" class="form-control"  placeholder="FirstName" name="First Name"required="">
             </div>
             <div class="col-sm-4">
-              <input type="text" class="form-control"  placeholder=" Second Name"required>
+              <input type="text" class="form-control"  placeholder="Second Name" name="Second Name"required="">
             </div>
             <div class="col-sm-4">
-              <input type="text" class="form-control"  placeholder=" Third Name"required>
+              <input type="text" class="form-control"  placeholder="Third Name" name="Third Name"required="">
             </div>
-            <div class="form-row">
-                                            <div class="form-group col-md-6">
-                                                <label for="first_name">First Name</label>
-                                                <input type="text" class="form-control" id="first_name" name="first_name" placeholder="First Name">
-                                            </div>
-            </div>
+          
         </div>
         <div class="row mt-1">
              <div class="col-sm-4">
-               <input type="text" class="form-control"  placeholder=" COUNTY OF RESIDENCE"required>
+               <input type="text" class="form-control"  placeholder="COUNTY OF RESIDENCE" name="COUNTY OF RESIDENCE"required="">
             </div>
              <div class="col-sm-4">
-               <input type="text" class="form-control"  placeholder="HIM/HER/THEY"required>
+                <input type="date" class="form-control"  placeholder="DATE OF BIRTH" name="DATE OF BIRTH"required="">
             </div>
-             <div class="col-sm-4">
-                <input type="date" class="form-control"  placeholder="DATE OF BIRTH"required>
-            </div>
+            <div class="col-sm-4">
+            <select class="form-select" id="sel1" name="GENDER" placeholder="GENDER">
+                  <option>male</option>
+                  <option>female</option>
+                  <option>them/they</option>
+            </select>
+          </div>
     
         </div>
         <div class="row mt-1">
             <div class="col-sm-4">
-             <input type="text" class="form-control"  placeholder="BODY TYPE"required>
+             <input type="text" class="form-control"  placeholder="BODY TYPE"name="BODY TYPE"required="">
             </div>
           <div class="col-sm-4">
-             <input type="tel" class="form-control" placeholder="PHONE NUMBER" required>
+             <input type="tel" class="form-control" placeholder="PHONE NUMBER"name="PHONE NUMBER" required="">
           </div>
           <div class="col-sm-4">
-             <input type="email"class="form-control" placeholder="email" name="email" required>
+             <input type="email"class="form-control" placeholder="email" name="email" required="">
            </div>
-           <div class="row text-end mt-1">
-           <nav>
-            <ul>
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </ul>
+           
+        <div class="col-sm-4">
+
         </div>
+        <div class="row text-end mt-1">
+          <nav>
+               <button type="submit" class="btn btn-primary" name="submit" value="submit"> SUBMIT</button>
+       </div>
         </nav>
           
           </div>
@@ -101,4 +101,19 @@
                     <p>@2022 princesawuor</p>
                 </div>
             </div> 
+            <script type="text/javascript">
+
+
+              const scriptURL = 'https://script.google.com/macros/s/AKfycbx11MDGtFyEALoyH5o3oMFg8O5lHJ4ozJ8bANoUigHqwXlyISUj-5NLXha-jJ02QiNy/exec'
+                      const form = document.forms['google-sheet']
+                    
+                      form.addEventListener('submit', e => {
+                        e.preventDefault()
+                        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                          .then(response => alert("You have successfully submitted."))
+                          .catch(error => console.error('Error!', error.message))
+                      })
+            </script>
+            </div>
 </body>
+</html>
