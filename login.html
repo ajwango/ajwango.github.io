@@ -36,40 +36,51 @@
               <input type="text" class="form-control"  placeholder="Second Name" name="Second Name"required="">
             </div>
             <div class="col-sm-4">
-              <input type="text" class="form-control"  placeholder="Third Name" name="Third Name"required="">
+              <input type="text" class="form-control"  placeholder="Third Name" name="Third Name">
             </div>
           
         </div>
         <div class="row mt-1">
              <div class="col-sm-4">
-               <input type="text" class="form-control"  placeholder="COUNTY OF RESIDENCE" name="COUNTY OF RESIDENCE"required="">
-            </div>
-             <div class="col-sm-4">
-                <input type="date" class="form-control"  placeholder="DATE OF BIRTH" name="DATE OF BIRTH"required="">
+               <input type="text" class="form-control"  placeholder="CITY/TOWN" name="CITY/TOWN"required="">
             </div>
             <div class="col-sm-4">
-            <select class="form-select" id="sel1" name="GENDER" placeholder="GENDER">
-                  <option>male</option>
-                  <option>female</option>
-                  <option>them/they</option>
-            </select>
+              <input type="tel" class="form-control" placeholder="PHONE NUMBER"name="PHONE NUMBER" required="">
+           </div>
+           <div class="col-sm-4">
+            <input type="email"class="form-control" placeholder="email" name="email" required="">
+          </div>
+            
+           
           </div>
     
         </div>
         <div class="row mt-1">
-            <div class="col-sm-4">
-             <input type="text" class="form-control"  placeholder="BODY TYPE"name="BODY TYPE"required="">
-            </div>
           <div class="col-sm-4">
-             <input type="tel" class="form-control" placeholder="PHONE NUMBER"name="PHONE NUMBER" required="">
+            <h6>BODY TYPE</h6>
+            <select class="form-select" id="sel1" name="BODY TYPE" placeholder="GENDER">
+              <option>THICK</option>
+              <option>SLIM</option>
+              <option>MEDIUM</option>
+            </select>
           </div>
-          <div class="col-sm-4">
-             <input type="email"class="form-control" placeholder="email" name="email" required="">
-           </div>
            
         <div class="col-sm-4">
+          <h6>COUNTRY</h6>
+            <select class="form-select" id="sel1" name="COUNTRY" placeholder="GENDER">
+              <option>KENYA</option>
+              <option>USA</option>
+              </select>
 
         </div>
+        <div class="col-sm-4">
+          <h6>GENDER</h6>
+          <select class="form-select" id="sel1" name="GENDER" placeholder="GENDER">
+                <option>male</option>
+                <option>female</option>
+                <option>them/they</option>
+          </select>
+          </div>
         <div class="row text-end mt-1">
           <nav>
                <button type="submit" class="btn btn-primary" name="submit" value="submit"> SUBMIT</button>
@@ -81,7 +92,7 @@
 
         </div>
         </div>
-        <div class="container-fluid mt-1 pd-5">
+        <div class="container-fluid mt-1 pd-5 text-bottom">
             <div class="row">
               <div class="col-sm-4">
                 <img src="pictures/project.jpg" width="50" height="30" class="logo" alt="">
@@ -110,7 +121,7 @@
                       form.addEventListener('submit', e => {
                         e.preventDefault()
                         fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-                          .then(response => alert("You have successfully submitted."))
+                          .then(response => alert("You have successfully submitted, WE WILL CALL YOU SHORTLY."))
                           .catch(error => console.error('Error!', error.message))
                       })
             </script>
