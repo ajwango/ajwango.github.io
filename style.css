@@ -12,7 +12,7 @@
 
 
 h4{
-  font-size: small
+  font-size: large
   ;
 }
 html{
@@ -260,6 +260,12 @@ margin-bottom: 0;
 
 
 }
+.h5{
+  font-size: larger;
+}
+.h6{
+  font-size: x-small;
+}
 .q h{
   font-size: small;
   color: whitesmoke;
@@ -267,7 +273,20 @@ margin-bottom: 0;
 .u{
   display: none;
 }
+.inquiry {
+  padding-bottom: 20px;
+}
+.inquiry .flex-container{
+  background-color: #0395ab63;
+}
+.inquiry .h3{
+  color: #000;
+}
+.inquiry .placeholder{
 
+  align-items: center;
+  align-self: center;
+}
 
 @media screen and (max-width: 600px)
  {
@@ -365,16 +384,19 @@ margin-bottom: 0;
   }
 
   .q a{
-
     background-color: #03b0cb62;
-  
-  
   }
   .title1{
-    font-size:smaller;
- 
-}
-  
+    font-size:smaller;}
+  .button{
+  border: 200px;
+  margin: 10px 110px;
+  padding: 2px;
+  outline: none;
+  }
+  .inquiry h3{
+    font-size: large;
+  }
   @media(max-width: 320px){ 
     iframe {
       position: relative;
